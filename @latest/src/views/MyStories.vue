@@ -38,7 +38,7 @@ export default {
     const user = JSON.parse(localStorage.getItem('user'))
     if (!user || !user._id) return alert('User not found')
     try {
-      const res = await axios.get(`http://localhost:2000/api/stories`)
+      const res = await axios.get(`https://readw.onrender.com/api/stories`)
       this.stories = res.data 
     } catch (err) {
       console.error('Failed to fetch stories', err)
@@ -47,7 +47,7 @@ export default {
   methods: {
     async deleteStory(id) {
       try {
-        await axios.delete(`http://localhost:2000/api/stories/${id}`)
+        await axios.delete(`https://readw.onrender.com/api/stories/${id}`)
         this.stories = this.stories.filter(story => story._id !== id)
       } catch (err) {
         console.error('Delete failed:', err)

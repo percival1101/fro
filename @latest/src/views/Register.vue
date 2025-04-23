@@ -44,7 +44,7 @@ export default {
       if (!user || !user._id) return alert('User not logged in')
 
       try {
-        await axios.post('http://localhost:2000/api/stories/full', {
+        await axios.post('https://readw.onrender.com/api/stories/full', {
           title: this.chapterTitle,
           description: this.description || '',
           content: this.content,

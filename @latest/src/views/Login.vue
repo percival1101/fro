@@ -26,7 +26,7 @@ export default {
   methods: {
     async login() {
       try {
-        const res = await axios.post('http://localhost:2000/api/users/login', {
+        const res = await axios.post('https://readw.onrender.com/api/users/login', {
           email: this.email.trim(),
           password: this.password
         })

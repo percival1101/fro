@@ -25,7 +25,7 @@
     async mounted() {
       const id = this.$route.params.id
       try {
-        const res = await axios.get(`http://localhost:2000/api/stories/read/${id}`)
+        const res = await axios.get(`https://readw.onrender.com/api/stories/read/${id}`)
         this.story = res.data
       } catch (err) {
         console.error('❌ Failed to fetch story:', err)

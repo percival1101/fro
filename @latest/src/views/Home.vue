@@ -41,7 +41,7 @@
     },
     async mounted() {
       try {
-        const res = await axios.get('http://localhost:2000/api/stories')
+        const res = await axios.get('https://readw.onrender.com/api/stories')
         this.stories = res.data
       } catch (err) {
         console.error('Failed to load stories', err)

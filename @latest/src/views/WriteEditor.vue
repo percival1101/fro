@@ -46,13 +46,13 @@
     try {
       if (this.storyId) {
         // Editing existing story
-        await axios.put(`http://localhost:2000/api/stories/${this.storyId}`, {
+        await axios.put(`https://readw.onrender.com/api/stories/${this.storyId}`, {
           title: this.chapterTitle,
           content: this.content
         })
       } else {
         // Creating new story (only title + description, no content yet)
-        await axios.post('http://localhost:2000/api/stories/full', {
+        await axios.post('https://readw.onrender.com/api/stories/full', {
           title: this.chapterTitle,
           description: this.description || '',
           userId: user._id
